@@ -17,11 +17,14 @@ function Form() {
     }
 
     return (
+            <div>
+            <h4> Form with useRef</h4>
             <form onSubmit={submit}>
                 <input ref = {colorname} type = "text" />
                 <input ref = {colorhex} type= "color" />
                 <button>ADD</button>
             </form>
+            </div>  
     );
 };
 

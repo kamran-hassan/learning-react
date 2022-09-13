@@ -1,6 +1,7 @@
 import './App.css';
 import { useState, useEffect } from "react";
 import Form from './Form'
+import FormuseState from './FormuseState';
 
 function App( {library}) {    // this is called destructing 
   const [emotion, setEmotion] = useState("Happy");
@@ -30,9 +31,9 @@ function App( {library}) {    // this is called destructing
       <label> {checked ? "checked" : "not checked"}</label>
     </div>
 
-    <div>
-      <Form />
-    </div>
+    <Form />
+
+    <FormuseState />
 
     </div>
   );
