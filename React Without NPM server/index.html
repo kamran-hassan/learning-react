@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Page Title</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="">
+<style>
+</style>
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    const App = (props) => {
+        const dishess = props.dishes;
+        return (
+            <div>
+                <ul>
+                {dishess.map((d) => (
+                    <li> {d} </li>
+                ))}
+                </ul>
+            </div>
+        );
+
+    };
+
+    const dish = ["Biryani",
+                  "Mutton",
+                  "new",
+                  "Chicken",
+                  "Shahi Paneer",
+                  "KFC"]
+    root.render( <App dishes = {dish}/>
+        
+    );
+</script>
+
+
+</body>
+</html>
