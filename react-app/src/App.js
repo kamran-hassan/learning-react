@@ -1,5 +1,6 @@
 import './App.css';
 import { useState, useEffect } from "react";
+import Form from './Form'
 
 function App( {library}) {    // this is called destructing 
   const [emotion, setEmotion] = useState("Happy");
@@ -8,7 +9,7 @@ function App( {library}) {    // this is called destructing
     else setEmotion('Happy');
   }
 
-  const [checked, setChecked] = useState("False");
+  const [checked, setChecked] = useState(false);
   //console.log(`Initial Check box is ${checked}`);
   useEffect(() => {
     console.log(`new emotion is ${emotion}`);
@@ -26,8 +27,13 @@ function App( {library}) {    // this is called destructing
       <input type ="checkbox"
       value={checked}
       onChange={() =>  setChecked((checked) => !checked)} />
-      <label>checked</label>
+      <label> {checked ? "checked" : "not checked"}</label>
     </div>
+
+    <div>
+      <Form />
+    </div>
+
     </div>
   );
 }
