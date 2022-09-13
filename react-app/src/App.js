@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Form from './Form'
 import FormuseState from './FormuseState';
 import CustomHookForm from './CustomHookForm';
+import FetchApi from './FetchApi';
 
 function App( {library}) {    // this is called destructing 
   const [emotion, setEmotion] = useState("Happy");
@@ -37,6 +38,8 @@ function App( {library}) {    // this is called destructing
     <FormuseState />
 
     <CustomHookForm />
+
+    <FetchApi />
 
     </div>
   );

@@ -37,3 +37,17 @@
     transform: rotate(360deg);
   }
 }
+
+.namestyle {
+  color:brown;
+}
+
+.photocontainer {
+
+}
+
+.photo {
+  width: 100px;
+  border-radius: 50%;
+  border: 2px solid #282c34;
+}
