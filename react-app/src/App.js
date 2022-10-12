@@ -5,6 +5,7 @@ import FormuseState from './FormuseState';
 import CustomHookForm from './CustomHookForm';
 import FetchApi from './FetchApi';
 import Someapitest from './Someapitest';
+import ListingTechnique from './ListingTechnique';
 
 function App( {library}) {    // this is called destructing 
   const [emotion, setEmotion] = useState("Happy");
@@ -43,6 +44,8 @@ function App( {library}) {    // this is called destructing
     <FetchApi />
 
     <Someapitest />
+
+    <ListingTechnique />
 
     </div>
   );
