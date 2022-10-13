@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { App } from './App';
-import {Home, About} from './MyRoutes';
+import {Home, About, History} from './MyRoutes';
 import {
   BrowserRouter,
   Routes,
@@ -15,7 +15,11 @@ root.render(
   <Routes>
     <Route path="/" element = {<App library = 'Kamran' />} />
     <Route path="/Home" element = {<Home/>} />
-    <Route path="/About" element = { <About />} />
+    <Route path="/About" element = { <About />} >
+
+    <Route path='History' element= { <History /> }/>
+
+    </Route>
   </Routes>
   </BrowserRouter>
     
