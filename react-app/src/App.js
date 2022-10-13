@@ -7,7 +7,7 @@ import FetchApi from './FetchApi';
 import Someapitest from './Someapitest';
 import ListingTechnique from './ListingTechnique';
 
-function App( {library}) {    // this is called destructing 
+export function App( {library}) {    // this is called destructing 
   const [emotion, setEmotion] = useState("Happy");
   function settemotion() {
     if (emotion === 'Happy') setEmotion("More Happy");
@@ -47,8 +47,9 @@ function App( {library}) {    // this is called destructing
 
     <ListingTechnique />
 
+    <div> <h4> <a href='/Home'> Home </a> &nbsp; <a href='/About'> About </a> </h4></div>
+
     </div>
   );
 }
 
-export default App;
