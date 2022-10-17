@@ -2,8 +2,10 @@ import { BiArchive } from "react-icons/bi";
 import './App.css';
 import Search from "./component/Search";
 import colordata from "./data/color.json"
+import Colorinfo from "./component/Colorinfo"
+import Adddata from "./component/Adddata";
 
-function styleobjret(col) {
+export function styleobjret(col) {
   return ({
     color: col
   })
@@ -14,6 +16,7 @@ function App() {
 
   var m1 = "{colordata.map(d => (<h1 style={styleobjret(`${d.value}`)} > { d.color }</h1>))}";
   var m2 = "{colordata.map((d) => {return (<h1 style={styleobjret(`${d.value}`)} > { d.color }</h1>);})}";
+  var m3 = "{colordata.map((ddd) => { return <Colorinfo key={ddd.id} colord = {ddd} />})}";
   return (
     
 
@@ -33,7 +36,16 @@ function App() {
           return (<h1 style={styleobjret(`${d.value}`)} > { d.color }</h1>);
         })}
       </ul>
-      
+
+      <h1> Listing using finalizing the methode in optimal form </h1>
+      <br />
+      <h6>{m3}</h6>
+      <ul>
+        {colordata.map((ddd) => { return <Colorinfo key={ddd.id} colord = {ddd} />})}
+      </ul>
+
+    
+      <Adddata />
     </div>
   );
 }
